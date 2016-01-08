@@ -23,6 +23,7 @@ from selenium.webdriver.support import expected_conditions as EC # available sin
 
 
 
+
 """
 
 #  udrl
@@ -30,6 +31,7 @@ from selenium.webdriver.support import expected_conditions as EC # available sin
 # 账号
 # 密码
 # 方法执行，就完整的一个流程。
+# todo：暂时未能解决退出的问题，目前是通过关闭浏览器，再开一个解决的
 
 
 def selenium(url,d,username,password,content):
@@ -71,26 +73,15 @@ def selenium(url,d,username,password,content):
         driver.execute_script('$(".table > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(3) > a:nth-child(1) > i:nth-child(1)").click()')
     # 等待几秒后去填写日记
     time.sleep(5)
-    # driver.execute_script('$("#cke_modalContent > div:nth-child(2)").children()[1].innerHTML ="%s"' % content)
     driver.execute_script("CKEDITOR.instances['modalContent'].setData('%s')" % content)
-    # driver.execute_script('$("#cke_modalContent > div:nth-child(2)").children()[1].innerHTML ="%s"' % content)
     print(u'日记填写完毕:%s' % content)
     time.sleep(5)
     # 点击提交。
-    # driver.execute_script('$("#btn_worklog_ok").click()')
     driver.find_element_by_id('btn_worklog_ok').click()
-    # driver.find_element_by_id('btn_worklog_ok').click()
-    time.sleep(5)
-    exit()
-    #操作以后。需要退出。
-    driver.get(url)
-    time.sleep(5)
-    # 点击退出按钮 div.dialog-shadow:nth-child(6) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)
-    # driver.execute_script('$("div.dialog-shadow:nth-child(6) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)").click()')
+    #关闭浏览器
+    driver.close()
     print(u'退出成功')
-    time.sleep(5)
-    #需要返回驱动。避免下一次在启动浏览器
-    return driver
+
 
 
 
@@ -101,11 +92,11 @@ class Main():
 
 if __name__ == '__main__':
     website = 'https://sso.jingoal.com/oauth/authorize?client_id=jmbmgtweb&response_type=code&state={access_count%3A1}&redirect_uri=http%3A%2F%2Fweb.jingoal.com%2Fmgt2%2F%3Flocale%3Dzh_CN#/login'
-    notecontent = u"我今天没有忘记写工作小结222222222222222222211321321321321321"
+    notecontent = u"继续填写日记"
 
-    d = selenium(website,None,'540045865@qq.com','luoding123',notecontent)
+    selenium(website,None,'540045865@qq.com','luoding123',notecontent)
 
-    d = selenium(website,d,'18256963312','htt199002',notecontent)
+    selenium(website,None,'18256963312','htt199002',notecontent)
 
     print(u'结束了')
 
