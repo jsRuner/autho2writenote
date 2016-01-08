@@ -85,7 +85,7 @@ def selenium(url):
 
 
 
-    # driver.find_element_by_id('btn_worklog_ok').click()
+    driver.find_element_by_id('btn_worklog_ok').click()
 
 
 class Main():
