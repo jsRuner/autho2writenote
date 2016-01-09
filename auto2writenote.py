@@ -189,7 +189,6 @@ if __name__ == '__main__':
     website = 'https://sso.jingoal.com/oauth/authorize?client_id=jmbmgtweb&response_type=code&state={access_count%3A1}&redirect_uri=http%3A%2F%2Fweb.jingoal.com%2Fmgt2%2F%3Flocale%3Dzh_CN#/login'
 
 
-    logging.info(u'发现账号需要去处理,数量为:%s')
 
     # exit()
 
@@ -199,10 +198,10 @@ if __name__ == '__main__':
 
     while True:
         l = get_info()
-        if l:
+        if l :
             logging.info(u'发现账号需要去处理,数量为:%s' % len(l))
         else:
-            logging.info(u'没有账号需要去处理.睡眠%d秒后继续检查'% requestsecond)
+            logging.info(u'没有账号需要去处理.睡眠%d秒后继续检查'% float(requestsecond))
             time.sleep(float(requestsecond))
             continue
 
