@@ -72,6 +72,18 @@ class Main():
 
 if __name__ == '__main__':
 
+    readme = u"######################################################################\r\n" \
+             u"本软件支持同步本地txt文本内容到指定的今目标账号中。可以扩展增加其他的同步。" \
+             u"需要注意，txt文件必须是utf-8编码，直接创建的txt是ascii编码。" \
+             u"\r\n#####################################################################"
+    print(readme)
+
+     # 先检查必备的文件，一个是日志文件，一个是配置文件
+    if not  os.path.exists('autowritenoteclient.ini'):
+         print(u'配置文件不存在')
+         time.sleep(5)
+         exit()
+
      # 读取配置。配置文件必须正确。
     config = ConfigParser.ConfigParser()
     config.readfp(open('autowritenoteclient.ini', "rb"))
@@ -82,7 +94,7 @@ if __name__ == '__main__':
     checkfiletime =  config.get("global", "checkfiletime")
 
 
-    print("http://wuwenfu.cn/?add_jin_post=luoding123&type=1&email=%s&password=%s&key=%s"% (email,password,key))
+    # print("http://wuwenfu.cn/?add_jin_post=luoding123&type=1&email=%s&password=%s&key=%s"% (email,password,key))
 
     #  发送一次请求。携带账号与密码。 后续的请求不携带账号与密码。
     f = urllib.urlopen("http://wuwenfu.cn/?add_jin_post=luoding123&type=1&email=%s&password=%s&key=%s"% (email,password,key))
