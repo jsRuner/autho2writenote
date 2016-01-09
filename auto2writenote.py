@@ -6,6 +6,7 @@ import urllib
 import urllib2
 import json
 import logging
+import ConfigParser
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
@@ -32,6 +33,13 @@ python不操作数据库。通过发送htt请求来实现。
 
 接口：获取账号列表。
 接口:发送日志记录。
+
+2016年1月9日 增加配置文件。配置当前多少秒调用一次接口。
+目前是30秒请求一次。
+
+客户端程序。自己调用。
+
+这里其实php服务端，只是为了使用http 进行数据的交换。可以直接客户端请求服务端。不过要写接口。非http协议。
 
 """
 
@@ -76,7 +84,7 @@ def selenium(url,d,username,password,content):
     logging.info(u"访问日志页面")
     # 有选择性的等待5秒
     driver.implicitly_wait(5)
-    
+
 
     # 先判断是否是新建日志。如果存在，则点击新建日志，如果不存在，则点击编辑。可以通过js返回值来判断。
     # jsstr ='if($("table.table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2)")[0].innerHTML.indexOf("新建工作小结")>0 ){return 1;}else{return 2;}';
@@ -145,10 +153,20 @@ class Main():
 
 
 if __name__ == '__main__':
+
+
+
+    # 读取配置。配置文件必须正确。
+    config = ConfigParser.ConfigParser()
+    config.readfp(open('auto2writenote.ini', "rb"))
+    requestsecond =  config.get("global", "apitime")
+    logpath =  config.get("global", "logpath")
+
+
     logging.basicConfig(level=logging.DEBUG,
                 format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                 datefmt='%a, %d %b %Y %H:%M:%S',
-                filename='auto2writenote.log',
+                filename= '%s'% config.get("global", "logpath"),
                 filemode='w')
     #################################################################################################
     #定义一个StreamHandler，将INFO级别或更高的日志信息打印到标准错误，并将其添加到当前的日志处理对象#
@@ -160,8 +178,12 @@ if __name__ == '__main__':
     #################################################################################################
     website = 'https://sso.jingoal.com/oauth/authorize?client_id=jmbmgtweb&response_type=code&state={access_count%3A1}&redirect_uri=http%3A%2F%2Fweb.jingoal.com%2Fmgt2%2F%3Flocale%3Dzh_CN#/login'
 
-    # 测试是否能正常运行。挂机一夜。
-    requestsecond = 30
+
+    logging.info(u'发现账号需要去处理,数量为:%s')
+
+    # exit()
+
+
     # 10秒执行一次。请求php。请求获取账号信息。向博客发送请求api。
     count = 0
 
