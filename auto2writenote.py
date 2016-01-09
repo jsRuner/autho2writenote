@@ -76,6 +76,7 @@ def selenium(url,d,username,password,content):
     logging.info(u"访问日志页面")
     # 有选择性的等待5秒
     driver.implicitly_wait(5)
+    
 
     # 先判断是否是新建日志。如果存在，则点击新建日志，如果不存在，则点击编辑。可以通过js返回值来判断。
     # jsstr ='if($("table.table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2)")[0].innerHTML.indexOf("新建工作小结")>0 ){return 1;}else{return 2;}';
