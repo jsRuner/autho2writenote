@@ -51,7 +51,7 @@ python不操作数据库。通过发送htt请求来实现。
 # todo：暂时未能解决退出的问题，目前是通过关闭浏览器，再开一个解决的
 
 
-def selenium(url,d,username,password,content):
+def selenium(url,d,username,password,content,key):
 
     if d is None:
         driver = webdriver.Firefox()
@@ -126,6 +126,16 @@ def selenium(url,d,username,password,content):
         # 点击提交。
         driver.find_element_by_id('btn_worklog_ok').click()
     time.sleep(5)
+    # 去通知一次，表示同步今目标ok了。
+    notifyurl = url = "http://wuwenfu.cn/?add_jin_post=luoding123&type=3&key=%s"% key
+    f=urllib.urlopen(notifyurl)
+    if f.read() == 'success':
+        logging.info(u"消息通知抵达，状态改变")
+    else:
+        logging.info(u"消息通知失败，状态未改变")
+
+
+
     #关闭浏览器
     driver.close()
     logging.info(u"退出浏览器")
@@ -193,7 +203,7 @@ if __name__ == '__main__':
             logging.info(u'发现账号需要去处理,数量为:%s' % len(l))
         else:
             logging.info(u'没有账号需要去处理.睡眠%d秒后继续检查'% requestsecond)
-            time.sleep(requestsecond)
+            time.sleep(float(requestsecond))
             continue
 
 
@@ -205,8 +215,8 @@ if __name__ == '__main__':
             count = count + 1
 
             start = time.time()
-            selenium(website,None,item['email'],item['password'],item['msg'])
+            selenium(website,None,item['email'],item['password'],item['msg'],item['key'])
             spend = time.time() - start
 
             logging.info(u'执行第%d次,花费时间:%d'% (count,spend))
-        time.sleep(requestsecond)
+        time.sleep(float(requestsecond))

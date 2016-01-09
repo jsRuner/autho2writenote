@@ -1,0 +1,96 @@
+Sat, 09 Jan 2016 18:21:31 auto2writenote.py[line:192] INFO 发现账号需要去处理,数量为:%s
+Sat, 09 Jan 2016 18:21:31 auto2writenote.py[line:203] INFO 发现账号需要去处理,数量为:2
+Sat, 09 Jan 2016 18:21:31 auto2writenote.py[line:214] INFO 当前账号为:doudouchidou@qq.com密码:123456789日志内容为:我在c盘321321321
+Sat, 09 Jan 2016 18:21:36 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session {"desiredCapabilities": {"platform": "ANY", "browserName": "firefox", "version": "", "marionette": false, "javascriptEnabled": true}}
+Sat, 09 Jan 2016 18:21:36 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:21:36 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/url {"url": "https://sso.jingoal.com/oauth/authorize?client_id=jmbmgtweb&response_type=code&state={access_count%3A1}&redirect_uri=http%3A%2F%2Fweb.jingoal.com%2Fmgt2%2F%3Flocale%3Dzh_CN#/login", "sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383"}
+Sat, 09 Jan 2016 18:21:36 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:21:36 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/timeouts/implicit_wait {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "ms": 10000.0}
+Sat, 09 Jan 2016 18:23:07 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:07 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element {"using": "id", "sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "value": "email"}
+Sat, 09 Jan 2016 18:23:08 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:08 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element/{12afa023-155d-496b-85bd-0138f03b3cb0}/value {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "id": "{12afa023-155d-496b-85bd-0138f03b3cb0}", "value": ["d", "o", "u", "d", "o", "u", "c", "h", "i", "d", "o", "u", "@", "q", "q", ".", "c", "o", "m"]}
+Sat, 09 Jan 2016 18:23:08 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:08 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element {"using": "id", "sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "value": "password"}
+Sat, 09 Jan 2016 18:23:08 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:08 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element/{fefb2b89-c1a8-47e4-86a1-ba018fe59176}/value {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "id": "{fefb2b89-c1a8-47e4-86a1-ba018fe59176}", "value": ["1", "2", "3", "4", "5", "6", "7", "8", "9"]}
+Sat, 09 Jan 2016 18:23:08 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:08 auto2writenote.py[line:66] INFO 填写账号与密码
+Sat, 09 Jan 2016 18:23:13 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element {"using": "css selector", "sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "value": ".btn-submit"}
+Sat, 09 Jan 2016 18:23:13 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:13 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element/{dc7b2f11-a2a4-436a-bc47-03cba274f260}/click {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "id": "{dc7b2f11-a2a4-436a-bc47-03cba274f260}"}
+Sat, 09 Jan 2016 18:23:13 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:23 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/execute {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "args": [], "script": "return window.location.href;"}
+Sat, 09 Jan 2016 18:23:23 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:23 auto2writenote.py[line:79] INFO 登录成功了
+Sat, 09 Jan 2016 18:23:33 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/url {"url": "http://web.jingoal.com/module/worklog/workLogInfo.do", "sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383"}
+Sat, 09 Jan 2016 18:23:34 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:34 auto2writenote.py[line:84] INFO 访问日志页面
+Sat, 09 Jan 2016 18:23:34 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/timeouts/implicit_wait {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "ms": 5000.0}
+Sat, 09 Jan 2016 18:23:35 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:35 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/execute {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "args": [], "script": "if($(\"#mylogelement table\")[0].innerHTML.indexOf(\"\u65b0\u5efa\u5de5\u4f5c\u5c0f\u7ed3\")>0 ){return 1;}else{return 2;}"}
+Sat, 09 Jan 2016 18:23:35 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:35 auto2writenote.py[line:114] INFO 本次操作属于编辑工作日记
+Sat, 09 Jan 2016 18:23:35 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element {"using": "xpath", "sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "value": "/html/body/div[1]/div/div[2]/div[4]/div/table/tbody/tr[4]/td[3]/a"}
+Sat, 09 Jan 2016 18:23:35 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:35 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element/{42360601-afc1-44ab-8a5a-bcda8de4d459}/click {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "id": "{42360601-afc1-44ab-8a5a-bcda8de4d459}"}
+Sat, 09 Jan 2016 18:23:35 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:40 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/execute {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "args": [], "script": "CKEDITOR.instances['modalContent'].setData('\u6211\u5728c\u76d8321321321')"}
+Sat, 09 Jan 2016 18:23:40 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:40 auto2writenote.py[line:124] INFO 日记编辑ok
+Sat, 09 Jan 2016 18:23:45 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element {"using": "id", "sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "value": "btn_worklog_ok"}
+Sat, 09 Jan 2016 18:23:45 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:45 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/element/{a211a7d2-382d-4070-b1e4-fc1a590dff60}/click {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383", "id": "{a211a7d2-382d-4070-b1e4-fc1a590dff60}"}
+Sat, 09 Jan 2016 18:23:45 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:50 auto2writenote.py[line:133] INFO 消息通知抵达，状态改变
+Sat, 09 Jan 2016 18:23:50 remote_connection.py[line:409] DEBUG DELETE http://127.0.0.1:16525/hub/session/ae5e03f1-f58b-4411-bebf-31c789418383/window {"sessionId": "ae5e03f1-f58b-4411-bebf-31c789418383"}
+Sat, 09 Jan 2016 18:23:50 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:50 auto2writenote.py[line:141] INFO 退出浏览器
+Sat, 09 Jan 2016 18:23:50 auto2writenote.py[line:221] INFO 执行第1次,花费时间:138
+Sat, 09 Jan 2016 18:23:50 auto2writenote.py[line:214] INFO 当前账号为:18256963312密码:htt199002日志内容为:我很讨厌你
+Sat, 09 Jan 2016 18:23:54 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session {"desiredCapabilities": {"platform": "ANY", "browserName": "firefox", "version": "", "marionette": false, "javascriptEnabled": true}}
+Sat, 09 Jan 2016 18:23:55 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:55 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/url {"url": "https://sso.jingoal.com/oauth/authorize?client_id=jmbmgtweb&response_type=code&state={access_count%3A1}&redirect_uri=http%3A%2F%2Fweb.jingoal.com%2Fmgt2%2F%3Flocale%3Dzh_CN#/login", "sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd"}
+Sat, 09 Jan 2016 18:23:55 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:23:55 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/timeouts/implicit_wait {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "ms": 10000.0}
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element {"using": "id", "sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "value": "email"}
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element/{d5fb78f3-ffee-4a2f-b9ab-80793ad42edb}/value {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "id": "{d5fb78f3-ffee-4a2f-b9ab-80793ad42edb}", "value": ["1", "8", "2", "5", "6", "9", "6", "3", "3", "1", "2"]}
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element {"using": "id", "sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "value": "password"}
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element/{c0fa27d6-c366-4839-a70d-a89b653959cd}/value {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "id": "{c0fa27d6-c366-4839-a70d-a89b653959cd}", "value": ["h", "t", "t", "1", "9", "9", "0", "0", "2"]}
+Sat, 09 Jan 2016 18:25:47 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:25:47 auto2writenote.py[line:66] INFO 填写账号与密码
+Sat, 09 Jan 2016 18:25:52 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element {"using": "css selector", "sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "value": ".btn-submit"}
+Sat, 09 Jan 2016 18:25:52 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:25:52 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element/{426389b4-13cf-4996-84f9-d66263a3cd3a}/click {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "id": "{426389b4-13cf-4996-84f9-d66263a3cd3a}"}
+Sat, 09 Jan 2016 18:25:52 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:02 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/execute {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "args": [], "script": "return window.location.href;"}
+Sat, 09 Jan 2016 18:26:02 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:02 auto2writenote.py[line:79] INFO 登录成功了
+Sat, 09 Jan 2016 18:26:12 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/url {"url": "http://web.jingoal.com/module/worklog/workLogInfo.do", "sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd"}
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:14 auto2writenote.py[line:84] INFO 访问日志页面
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/timeouts/implicit_wait {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "ms": 5000.0}
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/execute {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "args": [], "script": "if($(\"#mylogelement table\")[0].innerHTML.indexOf(\"\u65b0\u5efa\u5de5\u4f5c\u5c0f\u7ed3\")>0 ){return 1;}else{return 2;}"}
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:14 auto2writenote.py[line:114] INFO 本次操作属于编辑工作日记
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element {"using": "xpath", "sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "value": "/html/body/div[1]/div/div[2]/div[4]/div/table/tbody/tr[4]/td[3]/a"}
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element/{1e3bec5a-296e-46f9-aece-ccd71ccfad50}/click {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "id": "{1e3bec5a-296e-46f9-aece-ccd71ccfad50}"}
+Sat, 09 Jan 2016 18:26:14 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:19 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/execute {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "args": [], "script": "CKEDITOR.instances['modalContent'].setData('\u6211\u5f88\u8ba8\u538c\u4f60')"}
+Sat, 09 Jan 2016 18:26:19 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:19 auto2writenote.py[line:124] INFO 日记编辑ok
+Sat, 09 Jan 2016 18:26:24 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element {"using": "id", "sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "value": "btn_worklog_ok"}
+Sat, 09 Jan 2016 18:26:24 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:24 remote_connection.py[line:409] DEBUG POST http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/element/{210fc4a7-bb20-40d6-b1c7-cd64aa3bcb5f}/click {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd", "id": "{210fc4a7-bb20-40d6-b1c7-cd64aa3bcb5f}"}
+Sat, 09 Jan 2016 18:26:24 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:29 auto2writenote.py[line:135] INFO 消息通知失败，状态未改变
+Sat, 09 Jan 2016 18:26:29 remote_connection.py[line:409] DEBUG DELETE http://127.0.0.1:16652/hub/session/79df1bef-bcf3-475e-b31c-29bf9cd72afd/window {"sessionId": "79df1bef-bcf3-475e-b31c-29bf9cd72afd"}
+Sat, 09 Jan 2016 18:26:29 remote_connection.py[line:502] DEBUG Finished Request
+Sat, 09 Jan 2016 18:26:29 auto2writenote.py[line:141] INFO 退出浏览器
+Sat, 09 Jan 2016 18:26:29 auto2writenote.py[line:221] INFO 执行第2次,花费时间:159
