@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-# encoding: utf-8
+# encoding: utf8
 
 import time
 import urllib
 import urllib2
+import sys
+import chardet
 import json
 import logging
 import ConfigParser
@@ -11,6 +13,10 @@ from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC # available since 2.26.0
+
+reload(sys)
+
+sys.setdefaultencoding('utf8')
 
 """
 @version: 1.0
@@ -73,6 +79,8 @@ def selenium(url,d,username,password,content,key):
     currenturl = driver.execute_script("return window.location.href;")
     if currenturl == url:
         logging.info(u"登录失败")
+        #登录失败了，需要发送请求。修改状态。
+
         driver.close()
         return ''
 
@@ -99,7 +107,7 @@ def selenium(url,d,username,password,content,key):
         # 等待几秒后去填写日记
         time.sleep(5)
         # 这里容易出异常
-        driver.execute_script("CKEDITOR.instances['modalContent'].setData('%s')" % content)
+        driver.execute_script(u"CKEDITOR.instances['modalContent'].setData('%s')" % content)
         # print(u'日记填写完毕:%s' % content)
         logging.info(u"日志新建ok")
 
@@ -209,12 +217,19 @@ if __name__ == '__main__':
         for item in l:
             # print(item['email'])
             # print(item['password'])
-            # print(item['msg'])
-            logging.info(u'当前账号为:%s密码:%s日志内容为:%s' % (item['email'],item['password'],item['msg']))
+            # print(item['msg'].decode('utf-8', 'ignore'))
+            # print(chardet.detect(item['msg']))
+            # print(u"%s" % item['msg'])
+            # exit()
+            notemsg = item['msg'].decode('utf-8', 'ignore')
+
+
+            logging.info(u'当前账号为:%s密码:%s日志内容为:%s' % (item['email'],item['password'],notemsg))
             count = count + 1
 
             start = time.time()
-            selenium(website,None,item['email'],item['password'],item['msg'],item['key'])
+
+            selenium(website,None,item['email'],item['password'],notemsg,item['key'])
             spend = time.time() - start
 
             logging.info(u'执行第%d次,花费时间:%d'% (count,spend))
